@@ -1,50 +1,147 @@
-
 button {
-  background-color: gray;
-  display: block;
-  margin: auto auto;
+  background-color: rgb(125, 132, 150);
   color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 
 }
-.scores{
+
+.header {
+  padding: 15px 32px;
+  text-align: center;
+  color: black;
+  font-size: 46px;
+  margin: auto auto;
+}
+
+.scores {
   float: left;
   margin: 5px 5px;
   padding: 2px;
-
-
+  width: 100%;
 }
 
 .start {
-  background-color:#b9d1ee;
+  background-color: #b9d1ee;
   height: 100vh;
   color: #bebebe;
- 
 }
 
 .test {
-
   background-color: #d3d3d3;
   color: black;
   height: 100vh;
-
 }
 
 .end {
   background-color: #5f3f75;
   color: white;
   height: 100vh;
+}
+
+.time {
+  color: black;
+  text-align: right;
+}
+
+
+.testBox {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  padding: 15px 32px;
+}
+
+.testBox div {
+  color: white;
+  font-size: 16px;
 
 }
 
-.time{
-  text-align:right;
+.question {
+  display: block;
+  margin: auto auto;
+  background-color: rgb(104, 49, 117);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.scores {
+.answer1 {
+  align-self: center;
+  justify-content: space-between;
+  background-color: rgb(104, 49, 117);
+  display: block;
+  margin: auto auto;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.answer2 {
+  align-self: center;
+  justify-content: space-between;
+  background-color: rgb(104, 49, 117);
+  display: block;
+  margin: auto auto;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.answer3 {
+  align-self: center;
+  justify-content: space-between;
+  background-color: rgb(104, 49, 117);
+  display: block;
+  margin: auto auto;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.currentScore {
+  align-self: center;
+}
+
+.scoreBox {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  padding: 15px 32px;
+}
+
+.scoreBox div {
+  color: white;
+  font-size: 16px;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
+  background-color: rgb(207, 207, 207);
+  padding: 15px 32px;
+  color: black;
+  text-align: center;
 }
