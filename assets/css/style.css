@@ -122,7 +122,10 @@ button {
 .scoreBox {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
+  color:black;
   width: 400px;
   height: 200px;
   margin: auto;
@@ -144,4 +147,23 @@ button {
   padding: 15px 32px;
   color: black;
   text-align: center;
+}
+
+.scoresBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color:black;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  padding: 15px 32px;
+}
+
+.scoresBox div {
+  color: white;
+  font-size: 16px;
+
 }

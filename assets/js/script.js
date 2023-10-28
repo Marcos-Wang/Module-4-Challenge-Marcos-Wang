@@ -1,6 +1,6 @@
 var timeEl = document.querySelector(".time");
 var container = document.querySelector(".container");
-
+var myFinalScore = document.querySelector(".finalScore");
 
 var secondsLeft = 15;
 
@@ -10,11 +10,17 @@ timeEl.textContent = "15 Seconds";
 
 const myTest = document.querySelector('.testBox');
 
-myTest.style.visibility = 'hidden';
+const scoreBox = document.querySelector('.scoreBox');
+
+scoreBox.style.display = 'none';
+
+myTest.style.display = 'none';
 
 //test starter
 
 const myButton = document.querySelector('button');
+
+var saveButton = document.querySelector('#save');
 
 myButton.addEventListener("click", function () {
 
@@ -23,8 +29,8 @@ myButton.addEventListener("click", function () {
     mode = "test";
     container.setAttribute("class", "test");
     setTime();
-    myButton.style.visibility = 'hidden';
-    myTest.style.visibility = 'visible';
+    myButton.style.display = 'none';
+    myTest.style.display = 'flex';
   }
 
 });
@@ -69,7 +75,7 @@ function update(correct) {
   }
   if (questionNum == 5) {
     container.setAttribute("class", "end");
-    myTest.style.visibility = 'hidden';
+    myTest.style.display = 'none';
     secondsLeft = 0;
   }
 
@@ -122,8 +128,10 @@ function setTime() {
       clearInterval(timerInterval);
       mode = "end";
       container.setAttribute("class", "end");
-      myTest.style.visibility = 'hidden';
+      myTest.style.display = 'none';
+      scoreBox.style.display = 'flex';
       timeEl.textContent = "";
+      myFinalScore.textContent = score;
     }
 
   }, 1000);
@@ -131,6 +139,29 @@ function setTime() {
 
   //Final Score Box:
 
+
+  // saveButton.addEventListener("click", function (event) {
+  
+    
+  // event.preventDefault();
+
+  // var highScore = {
+  //   myName : document.getElementById("user-name"),
+  //   thisScore: score
+  // }
+
+  // localStorage.setItem("highScore", JSON.stringify(highScore));
+
+  // document.getElementById("user-name").style.display = "none";
+  // document.getElementById("save").style.display = "none";
+  // document.getElementById("willSave").style.display = "none";
+  // myFinalScore.textContent = "Saved!";
+  
+  // });
+  // let savedNameForm = localStorage.getItem('highScore');
+  // document.querySelector(".mySavedScores").textContent = "Name: " + highScore.myName + "Score: " + highScore.thisScore;
+
+  
 
   // width: 400px;
   //   height: 200px;
